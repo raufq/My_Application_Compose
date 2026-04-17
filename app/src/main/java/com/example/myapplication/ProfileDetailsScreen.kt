@@ -28,10 +28,10 @@ fun ProfileDetailsScreen(userId: Int, navController: NavHostController?) {
         ) {
             navController?.navigateUp()
         }
-    }) {
+    }) { innerPadding ->
 
 
-        Surface(modifier = Modifier.fillMaxSize()) {
+        Surface(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.Top,

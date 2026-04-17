@@ -66,4 +66,6 @@ dependencies {
 
     implementation("com.google.accompanist:accompanist-coil:0.10.0")
     implementation(libs.androidx.navigation.compose)
+
+
 }

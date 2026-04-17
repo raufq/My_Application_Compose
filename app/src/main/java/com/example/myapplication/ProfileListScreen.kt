@@ -39,8 +39,8 @@ fun ProfileListScreen(userList: List<UserProfile>, navController: NavHostControl
             title = "User List",
             imageVector = Icons.Filled.Menu
         ) {}
-    }) {
-        Surface(modifier = Modifier.fillMaxSize()) {
+    }) {innerPadding->
+        Surface(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
             LazyColumn {
                 items(userList) { user ->
                     ProfileCard(user) {
