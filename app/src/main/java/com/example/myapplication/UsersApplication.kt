@@ -12,14 +12,22 @@ import com.aqube.compose.ProfileDetailsScreen
 import com.aqube.compose.ProfileListScreen
 import com.aqube.compose.userList
 
+
 const val USER_ID_KEY = "userId"
 
 @Composable
 fun UsersApplication() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "userList") {
+    NavHost(navController = navController, startDestination = "HomeScreen") {
+        composable(route = "HomeScreen") {
+            homeScreen(navController)
+        }
         composable(route = "userList") {
             ProfileListScreen(userList, navController)
+        }
+        composable(route = "productList") {
+            //ProfileListScreen(userList, navController)
+            productList(navController)
         }
         composable(
             route = "userDetails/{$USER_ID_KEY}",
